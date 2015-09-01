@@ -1,8 +1,8 @@
 (export (version D)
   (design
     (source /home/ben/Projects/alarm-clock-v2/pcb/rgb-dot/rgb-dot.sch)
-    (date "Thu 04 Jun 2015 05:28:20 AM EDT")
-    (tool "Eeschema (2015-05-27 BZR 5688)-product")
+    (date "Tue 01 Sep 2015 03:41:21 AM EDT")
+    (tool "Eeschema (2015-08-16 BZR 6095)-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
         (title "RGB dot")
@@ -11,7 +11,7 @@
         (date "Thu 04 Jun 2015")
         (source rgb-dot.sch)
         (comment (number 1) (value CLKV2-PC-02))
-        (comment (number 2) (value CLKV2-DWG-03))
+        (comment (number 2) (value CLKV2-SCH-02))
         (comment (number 3) (value "Linux alarm clock (V2)"))
         (comment (number 4) (value "")))))
   (components
@@ -51,6 +51,16 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 55701E1A)))
   (libparts
+    (libpart (lib passive) (part CAP)
+      (description capacitor)
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CAP)
+        (field (name Part) -)
+        (field (name Family) Passive))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))))
     (libpart (lib opto) (part WS2812B)
       (description "Digital 5050 RGB LED")
       (fields
@@ -62,16 +72,6 @@
         (pin (num 2) (name DOUT) (type output))
         (pin (num 3) (name GND) (type power_in))
         (pin (num 4) (name DIN) (type input))))
-    (libpart (lib passive) (part CAP)
-      (description capacitor)
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CAP)
-        (field (name Part) -)
-        (field (name Family) Passive))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))))
     (libpart (lib connectors) (part HEADER-1x03)
       (description "Header - Single Row - 3 Pos")
       (fields
@@ -96,12 +96,12 @@
       (node (ref J1) (pin 3))
       (node (ref U1) (pin 3))
       (node (ref C1) (pin 1)))
-    (net (code 2) (name "Net-(J1-Pad2)")
-      (node (ref J1) (pin 2))
-      (node (ref U1) (pin 4)))
-    (net (code 3) (name "Net-(J2-Pad2)")
+    (net (code 2) (name /DOUT)
       (node (ref U1) (pin 2))
       (node (ref J2) (pin 2)))
+    (net (code 3) (name /DIN)
+      (node (ref U1) (pin 4))
+      (node (ref J1) (pin 2)))
     (net (code 4) (name +5V)
       (node (ref U1) (pin 1))
       (node (ref J2) (pin 1))

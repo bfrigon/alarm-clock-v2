@@ -13,12 +13,12 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Seven-Segment digit - PCB"
+Title "RGB Seven-segment digit PCB"
 Date "Thu 04 Jun 2015"
 Rev "A"
 Comp ""
 Comment1 "CLKV2-PC-01"
-Comment2 "CLKV2-DWG-01"
+Comment2 "CLKV2-SCH-01"
 Comment3 "Linux alarm clock (V2)"
 Comment4 ""
 $EndDescr
