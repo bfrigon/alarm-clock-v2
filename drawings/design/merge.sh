@@ -6,7 +6,7 @@ TMP_PDF_OUTPUT="/tmp/_merge_sh_output.pdf"
 
 change_drawing_title () {
     
-    git diff --quiet --exit-code $1.pdf
+    git diff-index --quiet --exit-code HEAD $1.pdf
     
     #### Check if the file was modified ####
     if [ $? -eq 1 ]; then
@@ -71,9 +71,15 @@ change_drawing_title "clkv2-dwg-08" "Touch keypad PCB"
 change_drawing_title "clkv2-dwg-09" "Touch keypad enclosure"
 change_drawing_title "clkv2-dwg-10" "Top panel vertical support"
 change_drawing_title "clkv2-dwg-11" "Front panel bracket"
+change_drawing_title "clkv2-dwg-12" "Motherboard PCB"
+change_drawing_title "clkv2-dwg-13" "Enclosure"
+change_drawing_title "clkv2-dwg-14" "Bottom cover"
+change_drawing_title "clkv2-dwg-15" "Touch keypad overlay"
 change_drawing_title "clkv2-dwg-20" "RGB seven-segments digit assembly" 
 change_drawing_title "clkv2-dwg-21" "RGB dots assembly" 
 change_drawing_title "clkv2-dwg-22" "Top panel assembly" 
+change_drawing_title "clkv2-dwg-23" "Motherboard assembly" 
+change_drawing_title "clkv2-dwg-24" "Arietta G25 assembly" 
 
 ####################################################
 echo "Combining pdf files for model V2..."

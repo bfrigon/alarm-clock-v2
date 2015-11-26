@@ -22,6 +22,5 @@ CLKV2-DWG-20  | CLKV2-AS-01       | RGB seven-segments digit assembly
 CLKV2-DWG-21  | CLKV2-AS-02       | RGB dots assembly
 CLKV2-DWG-22  | CLKV2-AS-03       | Top panel assembly
 CLKV2-DWG-23  | CLKV2-AS-04       | Motherboard assembly
-
-
+CLKV2-DWG-24  | CLKV2-AS-05       | Arietta G25 assembly
 CLKV2-DWG-30  | --                | Final assembly
