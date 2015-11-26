@@ -1,7 +1,7 @@
-(kicad_pcb (version 4) (host pcbnew "(2015-08-16 BZR 6095)-product")
+(kicad_pcb (version 4) (host pcbnew "(2015-09-10 BZR 6177)-product")
 
   (general
-    (links 0)
+    (links 19)
     (no_connects 0)
     (area 98.715999 95.042 191.845001 113.675381)
     (thickness 1.6)
